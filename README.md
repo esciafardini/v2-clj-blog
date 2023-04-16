@@ -1,40 +1,31 @@
-# core
+# Blog V2
 
-FIXME: my new application.
-
-## Installation
-
-Download from https://github.com/clj-blog-v2/core
+A web application from scratch
+To replace my bloated Luminus site
 
 ## Usage
 
-FIXME: explanation
+Run the project directly, via `:main-opts` - starting a jetty server
+
+    $ clojure -M:run-m
+
 
 Run the project directly, via `:exec-fn`:
 
     $ clojure -X:run-x
-    Hello, Clojure!
+    Bozo did the dub!
 
 Run the project, overriding the name to be greeted:
 
-    $ clojure -X:run-x :name '"Someone"'
-    Hello, Someone!
+    $ clojure -X:run-x :name Someone
+    Someone did the dub!
 
-Run the project directly, via `:main-opts` (`-m clj-blog-v2.core`):
 
-    $ clojure -M:run-m
-    Hello, World!
-
-Run the project, overriding the name to be greeted:
-
-    $ clojure -M:run-m Via-Main
-    Hello, Via-Main!
-
-Run the project's tests (they'll fail until you edit them):
+Run the project's tests:
 
     $ clojure -T:build test
 
-Run the project's CI pipeline and build an uberjar (this will fail until you edit the tests to pass):
+Run the project's CI pipeline and build an uberjar
 
     $ clojure -T:build ci
 

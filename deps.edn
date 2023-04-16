@@ -1,8 +1,10 @@
-{:paths ["src" "resources"]
- :deps {org.clojure/clojure {:mvn/version "1.11.1"}}
+{:paths ["src/clj" "src/cljs" "src/cljc" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        ring/ring-core {:mvn/version "1.9.1"}
+        ring/ring-jetty-adapter {:mvn/version "1.9.1"}}
  :aliases
- {:run-m {:main-opts ["-m" "clj-blog-v2.core"]}
-  :run-x {:ns-default clj-blog-v2.core
+ {:run-m {:main-opts ["-m" "clj_blog.core" "3888"]}
+  :run-x {:ns-default clj_blog.core
           :exec-fn my-fn
           :exec-args {:name "Bozo"}}
   :build {:deps {io.github.seancorfield/build-clj
@@ -12,7 +14,7 @@
                   :deps/root "slim"}}
           :ns-default build}
   :dev {:extra-deps {nrepl/nrepl {:mvn/version "0.8.3"}}
-                 :main-opts ["-m" "nrepl.cmdline" "--port" "8888"]}
+        :main-opts ["-m" "nrepl.cmdline" "--port" "8888"]}
   :test {:extra-paths ["test"]
          :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}
                       io.github.cognitect-labs/test-runner
